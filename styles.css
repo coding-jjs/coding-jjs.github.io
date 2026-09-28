@@ -167,7 +167,7 @@ a {
     display: block;
     border-radius: 0.6rem;
     border: 1px solid var(--line);
-    background: #fff;
+    background: #000;
 }
 
 .arch-figure figcaption {
