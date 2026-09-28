@@ -131,6 +131,27 @@
                         Server Action 진입 때 권한을 다시 확인하고,
                         Prisma·Gemini·스토리지로 이어집니다.
                     </p>
+                    <ol class="arch-mobile">
+                        <li>
+                            Browser → <code>proxy.ts</code> (역할별 URL 가드)
+                        </li>
+                        <li>
+                            역할별 페이지 → <code>features</code> 읽기/쓰기
+                        </li>
+                        <li>
+                            <code>lib</code>(auth·permission·prisma·ai) → DB /
+                            Gemini / Storage
+                        </li>
+                    </ol>
+                    <p class="arch-mobile-link">
+                        <a
+                            href="assets/academy-architecture.png"
+                            target="_blank"
+                            rel="noopener"
+                        >
+                            구조도 크게 보기
+                        </a>
+                    </p>
                     <figure class="arch-figure">
                         <img
                             src="assets/academy-architecture.png"
@@ -140,7 +161,14 @@
                         />
                         <figcaption>
                             app(라우팅) · features(도메인) ·
-                            lib(인증·권한·DB·AI) 경계
+                            lib(인증·권한·DB·AI) 경계 ·
+                            <a
+                                href="assets/academy-architecture.png"
+                                target="_blank"
+                                rel="noopener"
+                            >
+                                크게 보기
+                            </a>
                         </figcaption>
                     </figure>
                 </section>
