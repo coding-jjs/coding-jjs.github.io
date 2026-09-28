@@ -84,6 +84,30 @@
                     </figure>
                 </div>
 
+                <section class="arch" aria-labelledby="arch-heading">
+                    <h3 id="arch-heading">Architecture</h3>
+                    <p class="summary">
+                        브라우저 요청은 <code>proxy.ts</code>에서 역할에 맞지
+                        않는 URL을 먼저 막습니다. 페이지는
+                        <code>src/app</code>의 역할별 라우트로 들어가고,
+                        조회/변경은 <code>src/features</code>로 모읍니다. 쓰기는
+                        Server Action 진입 때 권한을 다시 확인하고,
+                        Prisma·Gemini·스토리지로 이어집니다.
+                    </p>
+                    <figure class="arch-figure">
+                        <img
+                            src="assets/academy-architecture.png"
+                            alt="학원 관리 플랫폼 아키텍처: proxy 가드, 역할별 라우트, features, lib, PostgreSQL과 외부 API"
+                            width="2028"
+                            height="2120"
+                        />
+                        <figcaption>
+                            app(라우팅) · features(도메인) ·
+                            lib(인증·권한·DB·AI) 경계
+                        </figcaption>
+                    </figure>
+                </section>
+
                 <h3>Design notes</h3>
                 <div class="notes">
                     <p>
@@ -101,20 +125,13 @@
                         Gemini 리포트를 바로 보내지 않고 검토 흐름을 두어 운영
                         리스크를 낮췄습니다.
                     </p>
+                    <p>
+                        <strong>배포까지 문서화.</strong>
+                        Next.js standalone + Docker + Lightsail/Caddy 초안을
+                        <code>deploy/</code>에 남겨 앱 구조와 배포 경로를 같이
+                        보이게 했습니다.
+                    </p>
                 </div>
-
-                <h3>What I built</h3>
-                <ul class="bullets">
-                    <li>
-                        Auth.js 기반 Google 로그인과 원장 중심 역할 부여 플로우
-                    </li>
-                    <li>역할별 홈·URL 가드와 PermissionGrant 세부 권한</li>
-                    <li>
-                        Prisma + PostgreSQL로 출석·성적·쪽지·청구 도메인 모델링
-                    </li>
-                    <li>Gemini 기반 AI 리포트·챗봇</li>
-                    <li>Docker / AWS Lightsail 배포 구성 설계</li>
-                </ul>
             </section>
 
             <!-- 3) 기술 스택 -->
