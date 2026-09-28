@@ -41,16 +41,15 @@ a {
 .brand {
     margin: 0 0 1rem;
     font-size: 0.95rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
     color: var(--accent);
 }
 
 .hero h1 {
     margin: 0 0 1rem;
     font-size: clamp(1.8rem, 4vw, 2.8rem);
-    line-height: 1.2;
-    max-width: 16ch;
+    line-height: 1.25;
+    max-width: 14em;
 }
 
 .lede,
@@ -88,12 +87,13 @@ a {
     background: transparent;
 }
 
-.badge {
-    font-size: 0.85rem;
-    color: var(--muted);
-    border: 1px dashed var(--line);
-    padding: 0.45rem 0.7rem;
-    border-radius: 999px;
+.btn:focus-visible,
+.demo-hint a:focus-visible,
+.arch-figure figcaption a:focus-visible,
+.arch-mobile-link a:focus-visible,
+.section a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .section {
@@ -105,8 +105,7 @@ a {
     margin: 0 0 0.5rem;
     color: var(--accent);
     font-size: 0.85rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    letter-spacing: 0.04em;
 }
 
 .arch {
