@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>장재성 — Portfolio</title>
+        <meta
+            name="description"
+            content="학원 관리 플랫폼을 중심으로 한 풀스택 포트폴리오"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- 1) 첫 화면: 나를 소개 -->
+        <header class="hero">
+            <p class="brand">장재성</p>
+            <h1>역할 기반 SaaS와 AI 기능을 만드는 개발자</h1>
+            <p class="lede">
+                학원 운영에 필요한 출결·성적·상담·리포트를 한 제품으로 설계하고
+                구현했습니다.
+            </p>
+            <div class="actions">
+                <a class="btn btn-primary" href="#project">프로젝트 보기</a>
+                <a
+                    class="btn btn-ghost"
+                    href="https://github.com/coding-jjs"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    GitHub
+                </a>
+            </div>
+        </header>
+
+        <main>
+            <!-- 2) 대표 프로젝트 -->
+            <section id="project" class="section">
+                <p class="eyebrow">Featured Project</p>
+                <h2>학원 관리 플랫폼</h2>
+                <p class="summary">
+                    원장·교사·학부모·학생 역할에 맞춰 출결, 성적, 상담, AI
+                    리포트를 한곳에서 다루는 웹 앱입니다.
+                </p>
+
+                <div class="actions">
+                    <a
+                        class="btn btn-primary"
+                        href="https://github.com/coding-jjs/academy-web"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Source
+                    </a>
+                    <!-- Demo는 나중에 URL만 넣으면 됨 -->
+                    <!--
+        <a class="btn btn-ghost" href="https://your-demo.vercel.app" target="_blank" rel="noopener">
+          Live Demo
+        </a>
+        -->
+                    <span class="badge">Live Demo 준비 중</span>
+                </div>
+
+                <div class="shots">
+                    <figure>
+                        <img
+                            src="assets/academy-director.png"
+                            alt="원장 대시보드 화면"
+                        />
+                        <figcaption>원장 대시보드</figcaption>
+                    </figure>
+                    <figure>
+                        <img
+                            src="assets/academy-teacher.png"
+                            alt="교사 출석 화면"
+                        />
+                        <figcaption>교사 출석</figcaption>
+                    </figure>
+                    <figure>
+                        <img
+                            src="assets/academy-parent.png"
+                            alt="학부모 화면"
+                        />
+                        <figcaption>학부모 홈</figcaption>
+                    </figure>
+                </div>
+
+                <h3>What I built</h3>
+                <ul class="bullets">
+                    <li>
+                        Auth.js 기반 Google 로그인과 원장 중심 역할 부여 플로우
+                    </li>
+                    <li>역할별 홈·URL 가드와 PermissionGrant 세부 권한</li>
+                    <li>
+                        Prisma + PostgreSQL로 출석·성적·쪽지·청구 도메인 모델링
+                    </li>
+                    <li>Gemini 기반 AI 리포트·챗봇</li>
+                    <li>Docker / AWS Lightsail 배포 구성 설계</li>
+                </ul>
+            </section>
+
+            <!-- 3) 기술 스택 -->
+            <section class="section">
+                <h2>Tech</h2>
+                <p class="tech">
+                    Next.js 16 · React 19 · Auth.js · Prisma · PostgreSQL ·
+                    Gemini · Supabase
+                </p>
+            </section>
+
+            <!-- 4) 연락 -->
+            <section class="section">
+                <h2>Contact</h2>
+                <p>
+                    <a
+                        href="https://github.com/coding-jjs"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        github.com/coding-jjs
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:paint510@kakao.com">paint510@kakao.com</a>
+                </p>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© <span id="year"></span> 장재성</p>
+        </footer>
+
+        <script>
+            document.getElementById("year").textContent =
+                new Date().getFullYear();
+        </script>
+    </body>
+</html>
