@@ -96,6 +96,25 @@
                     <li>Gemini 기반 AI 리포트·챗봇</li>
                     <li>Docker / AWS Lightsail 배포 구성 설계</li>
                 </ul>
+
+                <h3>Design notes</h3>
+                <div class="notes">
+                    <p>
+                        <strong>역할은 원장이 부여.</strong>
+                        가입자가 역할을 고르면 권한 사고가 나기 쉬워, Google
+                        가입 후 GUEST로 두고 원장이 부여하도록 만들었습니다.
+                    </p>
+                    <p>
+                        <strong>권한은 라우트 + PermissionGrant.</strong>
+                        역할별 홈으로 진입을 나누고, 교사·직원 세부 기능은 부여
+                        단위로 켰다 끄게 했습니다.
+                    </p>
+                    <p>
+                        <strong>AI는 초안 후 승인.</strong>
+                        Gemini 리포트를 바로 보내지 않고 검토 흐름을 두어 운영
+                        리스크를 낮췄습니다.
+                    </p>
+                </div>
             </section>
 
             <!-- 3) 기술 스택 -->
