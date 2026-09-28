@@ -162,9 +162,23 @@ a {
     color: var(--text);
 }
 
-@media (min-width: 800px) {
-    .shots {
-        grid-template-columns: repeat(3, 1fr);
+@media (max-width: 640px) {
+    .hero {
+        padding: 12vh 0 3rem;
+    }
+
+    .hero h1 {
+        max-width: none;
+        font-size: clamp(1.6rem, 7vw, 2.2rem);
+    }
+
+    .btn {
+        min-height: 44px;
+        padding: 0.85rem 1.1rem;
+    }
+
+    .arch-figure figcaption {
+        font-size: 0.8rem;
     }
 }
 
